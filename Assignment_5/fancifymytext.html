@@ -1,3 +1,8 @@
+<!-- 
+NAME: Casey Paras
+MODDULE: fancifymytext.html, Assignment 5
+COURSE: CSC193A - Professor Kane
+-->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -9,30 +14,34 @@
 
 	<body>
 		<h1>Fancify my Text</h1>
-		
 
 		<!-- Your UI controls go here -->
-			<!-- "A field for users to enter large (multi-line) amounts of text" -->
+
+		<!-- "A field for users to enter large (multi-line) amounts of text" -->
 		<fieldset>
 			<legend>Text</legend>
 			<textarea id="userText" rows="4" cols="30"></textarea>
 		</fieldset>
 
-			<!-- "Add a second bordered field set box labeled "Fancify" that contains the following controls"  -->
+		<!-- "Add a second bordered field set box labeled "Fancify" that contains the following controls"  -->
 		<fieldset>
+
 			<legend>Fancify</legend>
 			
+			<!-- "When the user clicks "Bigger", the text in the text area will get larger" -->
 			<button onclick="makeBigger()">Bigger!</button><br><br>
+			
 			<!-- "Modify your button so that it also adds a suffix of "-Moo" to the last word of each sentence" -->
 			<button onclick="mooText()">Moo</button><br><br>
-				
+
+			<!-- "Add some additional styles to the text when "FancyShmancy" radio button is selected"-->
 			<input type="radio" id="fancy" name="style" value="fancy" onchange="fancyText()">
 			<label for="fancy">FancyShmancy</label><br>
 
+			<!-- "If "BoringBetty" radio button is pressed, the styles go away"-->
 			<input type="radio" id="boring" name="style" value="boring" onchange="boringText()">
 			<label for="boring">BoringBetty</label><br><br>
 
-						
 		</fieldset>
 	</body>
 </html>
