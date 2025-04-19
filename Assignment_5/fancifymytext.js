@@ -32,13 +32,6 @@ function mooText() {
 
     // Add "-Moo" to the last word of each sentence
     let sentences = text.split(".");
-    for (let i = 0; i < sentences.length - 1; i++) {
-        let words = sentences[i].trim().split(" ");
-        if (words.length > 0) {
-            words[words.length - 1] += "-Moo";
-            sentences[i] = words.join(" ");
-        }
-    }
-
+    sentences = sentences.map(sentence => sentence.trim() ? sentence.trim() + "-Moo" : sentence);
     textArea.value = sentences.join(". ");
 }
