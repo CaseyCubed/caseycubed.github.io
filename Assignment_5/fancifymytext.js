@@ -1,6 +1,6 @@
 /*
 NAME: Casey Paras
-MODDULE: fancifymytext.js, Assignment 5
+MODULE: fancifymytext.js, Assignment 5
 COURSE: CSC193A - Professor Kane
 */
 // Create a new file and save it as fancifymytext.js
