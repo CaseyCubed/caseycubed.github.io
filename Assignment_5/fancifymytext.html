@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fancify Shamcify</title>
+
+		<!-- link to your script file here -->
+		
+	</head>
+
+	<body>
+		<h1>Fancify my Text</h1>
+		
+
+		<!-- Your UI controls go here -->
+			<!-- "A field for users to enter large (multi-line) amounts of text" -->
+		<fieldset>
+			<legend>Text</legend>
+			<textarea id="userText" rows="4" cols="30"></textarea>
+		</fieldset>
+
+			<!-- "Add a second bordered field set box labeled "Fancify" that contains the following controls"  -->
+		<fieldset>
+			<legend>Fancify</legend>
+			<button onclick="makeBigger()">Bigger!</button><br><br>
+				<input type="radio" id="fancy" name="style" value="fancy" onchange="fancyText()">
+					<label for="fancy">FancyShmancy</label><br>
+				<input type="radio" id="boring" name="style" value="boring" onchange="boringText()">
+					<label for="boring">BoringBetty</label>
+		</fieldset>
+		
+	</body>
+</html>
