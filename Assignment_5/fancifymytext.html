@@ -21,15 +21,18 @@
 			<!-- "Add a second bordered field set box labeled "Fancify" that contains the following controls"  -->
 		<fieldset>
 			<legend>Fancify</legend>
+			
 			<button onclick="makeBigger()">Bigger!</button><br><br>
-				<input type="radio" id="fancy" name="style" value="fancy" onchange="fancyText()">
-		<label for="fancy">FancyShmancy</label><br>
+			<!-- "Modify your button so that it also adds a suffix of "-Moo" to the last word of each sentence" -->
+			<button onclick="mooText()">Moo</button><br><br>
+				
+			<input type="radio" id="fancy" name="style" value="fancy" onchange="fancyText()">
+			<label for="fancy">FancyShmancy</label><br>
 
-		<input type="radio" id="boring" name="style" value="boring" onchange="boringText()">
-		<label for="boring">BoringBetty</label><br><br>
+			<input type="radio" id="boring" name="style" value="boring" onchange="boringText()">
+			<label for="boring">BoringBetty</label><br><br>
 
-				<!-- "Modify your button so that it also adds a suffix of "-Moo" to the last word of each sentence" -->
-					<button onclick="mooText()">Moo</button>		
+						
 		</fieldset>
 	</body>
 </html>

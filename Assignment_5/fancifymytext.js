@@ -18,6 +18,7 @@ function fancyText() {
 }
 
 function boringText() {
+    alert("BoringBetty mode activated!");
     const textArea = document.getElementById("userText");
     textArea.style.fontWeight = "normal";
     textArea.style.color = "black";
@@ -33,5 +34,5 @@ function mooText() {
     // Add "-Moo" to the last word of each sentence
     let sentences = text.split(".");
     sentences = sentences.map(sentence => sentence.trim() ? sentence.trim() + "-Moo" : sentence);
-    textArea.value = sentences.join(". ");
+    textArea.value = sentences.join(".");
 }
