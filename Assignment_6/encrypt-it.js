@@ -1,6 +1,8 @@
 /*
- * Starter file 
- */
+NAME: Casey Paras
+MODULE: encrypt-it.js, Assignment 6
+COURSE: CSC193A - Professor Kane
+*/
 (function() {
   "use strict";
 
