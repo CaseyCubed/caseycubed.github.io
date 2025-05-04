@@ -18,11 +18,21 @@
     // Include the line of code into the file: console.log("Window loaded!"); 
     // such that the message is logged to the console when the page is loaded
     console.log("Window loaded!"); 
+
     // Part 2: Add an event listener to the the "Encrypt-It!" button such that when 
     // clicked, your handleClick function is called.
     const encryptButton = document.getElementById("encrypt-it");
     encryptButton.addEventListener("click", handleClick);
+
+    // Part 3a: Add an event handler to the "Reset" button such that when clicked
+    // a new handleReset function is called
+    const resetButton = document.getElementById("reset");
+    resetButton.addEventListener("click", handleReset);
   }
+
+  // Add any other functions in this area (you should not implement your
+  // entire program in the init function, for similar reasons that
+  // you shouldn't write an entire Java program in the main method).
 
   /**
    * Part 2: Move your console statement inside a new function handleClick.
@@ -31,8 +41,14 @@
     console.log("Button clicked!"); // This will log the message when the button is clicked
   }
 
-  // Add any other functions in this area (you should not implement your
-  // entire program in the init function, for similar reasons that
-  // you shouldn't write an entire Java program in the main method).
-  
+  /**
+   * Part 3b: Add an event handler to the "Reset" button such that when clicked
+   * a new handleReset function is called
+   *  */
+  function handleReset() {
+    const inputTextArea = document.getElementById("input-text");
+    inputTextArea.value = ""; // Clear the textarea content
+    console.log("Reset button clicked: input cleared."); // Optional: confirm reset action in console
+  }
+
 })();
