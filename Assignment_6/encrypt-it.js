@@ -18,8 +18,17 @@
     // Include the line of code into the file: console.log("Window loaded!"); 
     // such that the message is logged to the console when the page is loaded
     console.log("Window loaded!"); 
-    // Note: In this function, we usually want to set up our event handlers
-    // for UI elements on the page.
+    // Part 2: Add an event listener to the the "Encrypt-It!" button such that when 
+    // clicked, your handleClick function is called.
+    const encryptButton = document.getElementById("encrypt-it");
+    encryptButton.addEventListener("click", handleClick);
+  }
+
+  /**
+   * Part 2: Move your console statement inside a new function handleClick.
+   */
+  function handleClick() {
+    console.log("Button clicked!"); // This will log the message when the button is clicked
   }
 
   // Add any other functions in this area (you should not implement your
