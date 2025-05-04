@@ -38,8 +38,13 @@
    * Part 2: Move your console statement inside a new function handleClick.
    */
   function handleClick() {
-    console.log("Button clicked!"); // This will log the message when the button is clicked
-  }
+    const inputTextArea = document.getElementById("input-text");
+    const textToEncrypt = inputTextArea.value; // Get the text from the textarea
+    const encryptedText = shiftCipher(textToEncrypt); // Encrypt the text
+    const resultParagraph = document.getElementById("result");
+    resultParagraph.innerHTML = encryptedText; // Display the encrypted text
+    console.log("Button clicked! Encrypted text displayed."); // Optional: confirm action in console
+    }
 
   /**
    * Part 3b: Add an event handler to the "Reset" button such that when clicked
@@ -49,6 +54,32 @@
     const inputTextArea = document.getElementById("input-text");
     inputTextArea.value = ""; // Clear the textarea content
     console.log("Reset button clicked: input cleared."); // Optional: confirm reset action in console
+  }
+
+  /**
+   * Part 4: Modify your JS code so that when the user clicks "Encrypt-It!", 
+   * the text in the input text area will be encrypted using a basic shift-cipher, 
+   * and output into the page's paragraph element with the id of output.
+   * 
+   * Returns an encrypted version of the given text, where
+   * each letter is shifted alphabetically ahead by 1 letter,
+   * and 'z' is shifted to 'a' (creating an alphabetical cycle).
+  */
+  function shiftCipher(text) {
+    text = text.toLowerCase();
+    let result = "";
+    for (let i = 0; i < text.length; i++) {
+      if (text[i] < 'a' || text[i] > 'z') {
+        result += text[i]; // Non-alphabetic characters remain unchanged
+      } else if (text[i] == 'z') {
+        result += 'a'; // Wrap around from 'z' to 'a'
+      } else { // letter is between 'a' and 'y'
+        let letter = text.charCodeAt(i);
+        let resultLetter = String.fromCharCode(letter + 1); // Shift the letter
+        result += resultLetter;
+      }
+    }
+    return result; // Return the encrypted text
   }
 
 })();
