@@ -21,8 +21,8 @@ app.get('/math/circle/:r', function (req, res) {
       res.send('Error: Radius must be a positive number.');
       return;
   }
-  let area = Math.PI * r * r;
-  let circumference = 2 * Math.PI * r;
+  let area = Math.PI * (r * r); // calculate area (pi x (radius x radius))
+  let circumference = 2 * Math.PI * r; // calculate circumference (2 x pi x radius) 
 
   res.type('application/json');
   res.json({
@@ -42,21 +42,22 @@ app.get('/math/circle/:r', function (req, res) {
 app.get('/hello/name', function (req, res) {
   const first = req.query['first'];
   const last = req.query['last'];
+
   if (!first && !last) {
-      res.status(400);
+      res.status(400); // 400 error due to missing required GET parameter (first name and last name)
       res.type('text');
       res.send('Missing Required GET parameters: first, last');
   } else if (!first) {
-      res.status(400);
+      res.status(400); // 400 error due to missing required GET parameter (first name)
       res.type('text');
       res.send('Missing Required GET parameter: first');
   } else if (!last) {
-      res.status(400);
+      res.status(400); // 400 error due to missing required GET parameter (last name)
       res.type('text');
       res.send('Missing Required GET parameter: last');
   } else {
-      res.type('text');
-      res.send(`Hello ${first} ${last}`); // Send a personalized greeting
+      res.type('text'); // success (no error generated), output "Hello <first name> <last name>"
+      res.send(`Hello ${first} ${last}`); // Send the personalized output
   }
 });
 
