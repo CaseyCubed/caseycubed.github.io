@@ -1,10 +1,15 @@
+/*
+NAME: Casey Paras
+MODULE: app.js, Assignment 8
+COURSE: CSC193A - Professor Kane
+*/
 'use strict';
 
 const express = require('express');
 const app = express();
 
 // define endpoint for exercise 1 here
-/** EXCERCISE 1
+/** EXERCISE 1
  * Add a new GET endpoint, /math/circle/:r, which takes a radius as a URL parameter. 
  * It should then respond in JSON with the area and circumference.
  */
@@ -28,7 +33,7 @@ app.get('/math/circle/:r', function (req, res) {
 
 
 // define endpoint for exercise 2 here
-/** EXCERCISE 2
+/** EXERCISE 2
  * Add a new GET endpoint, /hello/name, which takes as query parameters 
  * a first and last parameter. It should then respond in plain text with 
  * "Hello firstName lastName" replacing firstName with the value of first
